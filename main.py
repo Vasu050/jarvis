@@ -3,7 +3,6 @@ import webbrowser
 import pyttsx3
 import musiclibrary
 import requests
-recognizer=sr.Recognizer()
 
 
 #when we dont specify module then we write module name or alias name before class and functions like sr.Recoginizor
@@ -16,7 +15,6 @@ recognizer=sr.Recognizer()
 
 #if we would have done like that From speech_recognition import Recognizer then we dont have to do sr.Recognizer instead only Recognizer
 
-recognizer=sr.Recognizer()     #call the class
 engine=pyttsx3.init()    #initialised the ttsx engine,its a standalone function otherwise dont know why we did it although its a convention
 newsapi="0d8d98318fcc4be5a9fb7bfdff061cf4"
 url=" https://newsapi.org/v2/top-headlines?country=us&apiKey=0d8d98318fcc4be5a9fb7bfdff061cf4"
@@ -72,9 +70,4 @@ if __name__=="__main__":
  
  
   except Exception as e: 
-    print("Error{0}".format(e))
-  '''except sr.RequestError as e:
-    print("Sphinx error; {0}".format(e))
-  except sr.UnknownValueError:
-    print("Could not understand audio")
-    speak("I did not understand that. Could you please repeat?")'''
+    print("Error{}".format(e))
